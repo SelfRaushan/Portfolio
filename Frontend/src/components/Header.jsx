@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../assets/Logo.png';
+import Logo from '../assets/Logo 2.png';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 
 const Header = ({ theme, toggleTheme }) => {
@@ -45,7 +45,7 @@ const Header = ({ theme, toggleTheme }) => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/" className="transition-transform duration-300 hover:scale-105 block">
-                <img src={Logo} alt="Logo" className="h-14 w-auto" />
+                <img src={Logo} alt="Logo" className="h-36 w-auto" />
               </Link>
             </div>
 
