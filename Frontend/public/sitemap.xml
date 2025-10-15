@@ -9,8 +9,25 @@
 
 <url>
   <loc>https://portfolio-t5ub-fawn.vercel.app/</loc>
-  <lastmod>2025-10-14T16:35:26+00:00</lastmod>
 </url>
 
+<url>
+  <loc>https://portfolio-t5ub-fawn.vercel.app/about</loc>
+</url>
+
+<url>
+  <loc>https://portfolio-t5ub-fawn.vercel.app/portfolio</loc>
+</url>
+
+<url>
+  <loc>https://portfolio-t5ub-fawn.vercel.app/contact</loc>
+</url>  
+
+<url>
+  <loc>https://portfolio-t5ub-fawn.vercel.app/blog</loc>
+</url>
+<url>
+<loc>https://portfolio-t5ub-fawn.vercel.app/skills</loc>
+</url>
 
 </urlset>
