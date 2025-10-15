@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^justgodigital.online$ [NC]
+RewriteRule (.*) http://www.justgodigital.online/$1 [R=301,L] 
