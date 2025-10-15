@@ -60,13 +60,7 @@ const HeroSection = () => {
           >
             View My Work <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
-          <a
-            href="/public/Raushan_Kumar_Resume.pdf"
-            download
-            className="group flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg shadow-slate-700/20 hover:shadow-xl hover:shadow-slate-600/40 transform hover:-translate-y-1"
-          >
-            Download Resume <Download className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
-          </a>
+          
         </div>
       </div>
     </section>
