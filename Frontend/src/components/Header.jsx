@@ -46,7 +46,7 @@ const Header = ({ theme, toggleTheme }) => {
             <div className="flex-shrink-0">
               <Link to="/" className="transition-transform duration-300 hover:scale-105 block">
                 <img src={Logo} alt="Logo" className="h-36 w-auto" />
-              </Link>
+              </Link>   
             </div>
 
             {/* Desktop Navigation */}
