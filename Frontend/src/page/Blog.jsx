@@ -79,9 +79,6 @@ const Blog = () => {
         canonicalUrl="https://justgodigital.online/blog"
       />
       
-      <title>Web Development Blog | Rausah Kumar</title>
-      <meta name="description" content="Read articles and tutorials on web development, programming tips, and technology insights from Rausah Kumar." />
-
 
       <div ref={containerRef} className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         

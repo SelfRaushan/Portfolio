@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import MyPic from '../assets/MyPic.png';
 import { Code, Rocket, Heart, Briefcase, GraduationCap, Zap } from 'lucide-react';
+import SEO from '../components/Seo';
 
 // Custom hook for observing elements on scroll
 const useIntersectionObserver = (options) => {
