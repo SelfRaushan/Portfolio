@@ -103,8 +103,8 @@ const About = () => {
       `}</style>
       {/* SEO */}
       <SEO 
-        title="About Me | Rausah Kumar"
-        description="Learn more about Rausah Kumar's journey into web development, my passion for coding, and the technologies I work with."
+        title="About Me | Raushan Kumar"
+        description="Learn more about Raushan Kumar's journey into web development, my passion for coding, and the technologies I work with."
         canonicalUrl="https://justgodigital.online/about"
   
       />

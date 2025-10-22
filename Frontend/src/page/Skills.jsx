@@ -115,9 +115,9 @@ const Skills = () => {
 
       {/* SEO */}
       <SEO 
-        title="Technical Skills | Rausah Kumar"
+        title="Technical Skills | Raushan Kumar"
         description="A detailed overview of my technical skills, including proficiency in JavaScript, React.js, Node.js, CSS, HTML, and other technologies."
-        keywords="Rausah Kumar, Frontend Developer, Backend Developer"
+        keywords="Raushan Kumar, Frontend Developer, Backend Developer"
         canonicalUrl="https://justgodigital.online/skills"
 
       />

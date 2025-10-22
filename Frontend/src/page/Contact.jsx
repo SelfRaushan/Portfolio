@@ -89,8 +89,8 @@ const Contact = () => {
 
       {/* SEO */}
       <SEO 
-        title="Contact Me | Rausah Kumar" 
-        description="Get in touch with Rausah Kumar for project collaborations, job opportunities, or any inquiries. Let's build something amazing together." 
+        title="Contact Me | Raushan Kumar" 
+        description="Get in touch with Raushan Kumar for project collaborations, job opportunities, or any inquiries. Let's build something amazing together." 
         canonicalUrl="https://justgodigital.online/contact"
       />
  

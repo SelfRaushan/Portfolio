@@ -74,7 +74,7 @@ const Blog = () => {
 
       {/* SEO */}
       <SEO
-        title="Web Development Blog | Rausah Kumar"
+        title="Web Development Blog | Raushan Kumar"
         description="Read articles and tutorials on web development, programming tips, and technology insights from Rausah Kumar."
         canonicalUrl="https://justgodigital.online/blog"
       />
