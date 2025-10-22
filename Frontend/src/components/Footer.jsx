@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagramSquare, FaFacebook } from 'react-icons/fa';
 import { ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -33,6 +33,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-2xl font-bold text-slate-800 dark:text-white">Raushan Kumar</h3>
             <p className="mt-2 text-slate-600 dark:text-gray-300">MERN Stack Developer</p>
+            <p className="mt-2 text-slate-600 dark:text-gray-300">A passionate developer focused on creating <br />high-quality, responsive, and performant web applications.</p>
           </div>
 
           <div className="flex flex-col items-center">
@@ -57,6 +58,12 @@ const Footer = () => {
                 </a>
                 <a href="https://github.com/SelfRaushan" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-slate-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-white transition-transform duration-300 transform hover:scale-125">
                   <FaGithub size={24} />
+                </a>
+                <a href="https://instagram.com/raushan" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-slate-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-white transition-transform duration-300 transform hover:scale-125">
+                  <FaInstagramSquare size={24} />
+                </a>
+                <a href="https://https://www.facebook.com/raushan" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-slate-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-white transition-transform duration-300 transform hover:scale-125">
+                  <FaFacebook size={24} />
                 </a>
               </div>
             </div>
