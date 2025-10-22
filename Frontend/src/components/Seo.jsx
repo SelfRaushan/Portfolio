@@ -6,7 +6,7 @@ function Seo({ title, description, canonicalUrl, keywords }) {
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {/* --- Keywords --- */}
+      {/* --- Keywords --- */ }
       <meta name="keywords" content={keywords} />
       
       {/* --- IMPORTANT SEO TAGS --- */}
@@ -18,7 +18,7 @@ function Seo({ title, description, canonicalUrl, keywords }) {
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
       {/* You can add a default og:image or make it a prop too */}
-      <meta property="og:image" content="https://justgodigital.online/og-image.png" />
+      <meta property="og:image" content="https://justgodigital.online/icon.png" />
       
       {/* --- Twitter Cards --- */}
       <meta name="twitter:card" content="summary_large_image" />

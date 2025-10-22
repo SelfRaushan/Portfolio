@@ -62,8 +62,8 @@ const Home = () => {
       `}</style>
       {/* SEO */}
       <SEO
-        title="Roshan Kumar - MERN Stack Developer Portfolio"
-        description="Portfolio of Roshan Kumar, a passionate MERN stack developer creating high-quality, responsive, and performant web applications. Available for hire and collaboration."
+        title="Raushan Kumar - MERN Stack Developer Portfolio"
+        description="Portfolio of Raushan Kumar, a passionate MERN stack developer creating high-quality, responsive, and performant web applications. Available for hire and collaboration."
         canonicalUrl="https://justgodigital.online/"
       />
       {/* Add your ProfilePage JSON-LD script only on the home page */}
