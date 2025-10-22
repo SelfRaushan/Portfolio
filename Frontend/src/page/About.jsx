@@ -102,9 +102,12 @@ const About = () => {
         }
       `}</style>
       {/* SEO */}
-      <title>About Me | Rausah Kumar</title>
-      <meta name="description" content="Learn more about Rausah Kumar's journey into web development, my passion for coding, and the technologies I work with." />
-
+      <SEO 
+        title="About Me | Rausah Kumar"
+        description="Learn more about Rausah Kumar's journey into web development, my passion for coding, and the technologies I work with."
+        canonicalUrl="https://justgodigital.online/about"
+  
+      />
       
       <div ref={containerRef} className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         {/* Hero Section */}

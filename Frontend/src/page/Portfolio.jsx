@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ProjectCard from '../components/ProjectCard';
+import SEO from '../components/Seo';  
 
 // --- All Projects Data ---
 const allProjects = [
@@ -89,9 +90,11 @@ const Portfolio = () => {
         .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
       `}</style>
       {/* SEO */}
-      <title>My Projects | Rausah Kumar's Portfolio</title>
-      <meta name="description" content="Explore a collection of web development projects by Rausah Kumar, demonstrating skills in building modern, responsive web applications." />
-
+      <SEO
+        title="My Projects | Raushan Kumar's Portfolio"
+        description="Explore a collection of web development projects by Raushan Kumar, demonstrating skills in building modern, responsive web applications."
+        canonicalUrl="https://justgodigital.online/portfolio"
+      />
       
       <div ref={containerRef} className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         <section className="py-20 text-center px-4">

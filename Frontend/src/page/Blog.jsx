@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import BlogIdeaGenerator from '../components/BlogIdeaGenerator';
 import { ArrowRight } from 'lucide-react';
+import SEO from '../components/Seo';
 
 // --- Placeholder Data for Blog Posts ---
 const featuredPost = {
@@ -72,7 +73,11 @@ const Blog = () => {
       `}</style>
 
       {/* SEO */}
-
+      <SEO
+        title="Web Development Blog | Rausah Kumar"
+        description="Read articles and tutorials on web development, programming tips, and technology insights from Rausah Kumar."
+        canonicalUrl="https://justgodigital.online/blog"
+      />
       
       <title>Web Development Blog | Rausah Kumar</title>
       <meta name="description" content="Read articles and tutorials on web development, programming tips, and technology insights from Rausah Kumar." />

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, ArrowRight } from 'lucide-react';
+import SEO from '../components/Seo';
 
 // Import your existing enhanced components
 import HeroSection from '../components/HeroSection';
@@ -60,8 +61,27 @@ const Home = () => {
         }
       `}</style>
       {/* SEO */}
-      <title>Raushan Kumar - MERN Stack Developer Portfolio</title>
-      <meta name="description" content="Portfolio of Roshan Kumar, a passionate MERN stack developer creating high-quality, responsive, and performant web applications. Available for hire and collaboration." />
+      <SEO
+        title="Roshan Kumar - MERN Stack Developer Portfolio"
+        description="Portfolio of Roshan Kumar, a passionate MERN stack developer creating high-quality, responsive, and performant web applications. Available for hire and collaboration."
+        canonicalUrl="https://justgodigital.online/"
+      />
+      {/* Add your ProfilePage JSON-LD script only on the home page */}
+      <script type="application/ld+json">
+      {`
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Raushan Kumar",
+            "jobTitle": "MERN Stack Developer",
+            "url": "https://justgodigital.online/"
+          }
+        }
+      `}
+      </script>
+
       {/* Main container with theme-aware background */}
       <div className="bg-slate-50 dark:bg-slate-900 transition-colors duration-500">
         <HeroSection />

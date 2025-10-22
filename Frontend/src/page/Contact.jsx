@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Linkedin, Github, Send, User, Briefcase, MessageSquare, ArrowRight, Calendar } from 'lucide-react';
+import SEO from '../components/Seo';
 
 const CONTACT_EMAIL = "raushansingh727308@gmail.com";
 const LINKEDIN_URL = "https://www.linkedin.com/in/raushankumar7273/";
@@ -87,9 +88,12 @@ const Contact = () => {
 
 
       {/* SEO */}
-
-      <title>Contact Me | Rausah Kumar</title>
-      <meta name="description" content="Get in touch with Rausah Kumar for project collaborations, job opportunities, or any inquiries. Let's build something amazing together." />
+      <SEO 
+        title="Contact Me | Rausah Kumar" 
+        description="Get in touch with Rausah Kumar for project collaborations, job opportunities, or any inquiries. Let's build something amazing together." 
+        canonicalUrl="https://justgodigital.online/contact"
+      />
+ 
 
       
       <div ref={containerRef} className="min-h-screen bg-animated-gradient flex items-center justify-center py-20 px-4 transition-all duration-300">

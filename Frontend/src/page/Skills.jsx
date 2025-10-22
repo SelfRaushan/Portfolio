@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Database, Terminal, Code, Wind } from 'lucide-react';
+import SEO from '../components/Seo';
 
 // --- Enhanced Data for the Skills Page ---
 // Added color properties for dynamic styling
@@ -113,9 +114,13 @@ const Skills = () => {
 
 
       {/* SEO */}
-      <title>Technical Skills | Rausah Kumar</title>
-      <meta name="description" content="A detailed overview of my technical skills, including proficiency in JavaScript, React.js, Node.js, CSS, HTML, and other technologies." />
+      <SEO 
+        title="Technical Skills | Rausah Kumar"
+        description="A detailed overview of my technical skills, including proficiency in JavaScript, React.js, Node.js, CSS, HTML, and other technologies."
+        keywords="Rausah Kumar, Frontend Developer, Backend Developer"
+        canonicalUrl="https://justgodigital.online/skills"
 
+      />
       
 
       <div ref={containerRef} className="relative overflow-hidden bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
