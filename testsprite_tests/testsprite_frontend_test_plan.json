@@ -1,0 +1,584 @@
+[
+  {
+    "id": "TC001",
+    "title": "Admin Login Success",
+    "description": "Verify admin can log in successfully using valid credentials and receive a valid JWT token.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid admin username/email and password."
+      },
+      {
+        "type": "action",
+        "description": "Click on login button."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that login is successful and a valid JWT token is returned."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify admin is redirected to the Dashboard page."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Admin Login Failure with Invalid Credentials",
+    "description": "Verify that login fails when invalid username/email or password is used.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid username/email and/or password."
+      },
+      {
+        "type": "action",
+        "description": "Click on login button."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify appropriate error message is displayed indicating invalid credentials."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that no JWT token is returned."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Access Protected Routes Without Token",
+    "description": "Verify that protected admin routes cannot be accessed without a valid JWT token.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Attempt to access Dashboard or Projects page URL directly without a JWT token."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the API responds with a 401 Unauthorized or redirects to login page."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Logout Functionality",
+    "description": "Verify that admin logout invalidates the token and redirects to the login page.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login successfully as admin."
+      },
+      {
+        "type": "action",
+        "description": "Click on logout button."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the JWT token is invalidated or removed from client storage."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify admin is redirected to login page."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to access protected route again."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify access is denied and user is redirected to login."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Dashboard Displays Correct Statistics and Recent Activity",
+    "description": "Verify that the admin dashboard shows accurate statistics for projects, blog posts, messages, and users as well as recent activities.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin with valid JWT."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the Dashboard page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify statistics numbers accurately reflect existing projects, blog posts, messages, and users in the database."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify recent activity feed shows latest edits, additions or deletions."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify UI is responsive and elements are displayed correctly on different screen sizes."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Create New Project with Valid Data",
+    "description": "Verify creating a new project with all required fields including image URLs, technologies, and links succeeds.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to Projects management page."
+      },
+      {
+        "type": "action",
+        "description": "Click on 'Create New Project'."
+      },
+      {
+        "type": "action",
+        "description": "Fill in all required fields with valid data: title, description, image URLs, technology tags, and project links."
+      },
+      {
+        "type": "action",
+        "description": "Submit the form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project is created successfully and appears in the project list."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the backend API responds with success status."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Create Project with Missing Mandatory Fields",
+    "description": "Verify that attempting to create a project without required fields results in proper validation errors.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to create new project page."
+      },
+      {
+        "type": "action",
+        "description": "Leave required fields such as title or description empty or invalid."
+      },
+      {
+        "type": "action",
+        "description": "Submit the form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify appropriate frontend validation errors are displayed."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify backend API returns 400 Bad Request with proper validation error messages."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Update Existing Project Details",
+    "description": "Verify admin can edit project details including images, technologies, and links and changes are saved correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin and navigate to Projects page."
+      },
+      {
+        "type": "action",
+        "description": "Select an existing project and click edit."
+      },
+      {
+        "type": "action",
+        "description": "Modify fields such as title, description, images, and technologies."
+      },
+      {
+        "type": "action",
+        "description": "Submit the update form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify changes are persisted in the database and UI updates accordingly."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify backend API responds with success status."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Delete a Project",
+    "description": "Verify that admin can delete a project and it is removed from the listing and database.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login and navigate to Projects page."
+      },
+      {
+        "type": "action",
+        "description": "Select a project and perform delete action."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a confirmation prompt is shown before deletion."
+      },
+      {
+        "type": "action",
+        "description": "Confirm the delete action."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project is removed from the projects list and backend database."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify backend API response indicates successful deletion."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Blog Post Creation with Content, Tags, and Author",
+    "description": "Verify admin can create blog posts with content editing, tags, and author assignments properly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Blog Posts management section."
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new blog post."
+      },
+      {
+        "type": "action",
+        "description": "Enter title, rich content, tags, and assign an author."
+      },
+      {
+        "type": "action",
+        "description": "Submit the new blog post form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new blog post appears in the listing with correct details."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the backend API returns successful creation response."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Edit and Update Blog Post",
+    "description": "Verify that admin can update blog post content, tags, and author and changes are saved.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to blog post list and select a post to edit."
+      },
+      {
+        "type": "action",
+        "description": "Change the content, update tags and author."
+      },
+      {
+        "type": "action",
+        "description": "Submit the updates."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify updated blog post details persist in the UI and backend."
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Delete Blog Post",
+    "description": "Verify admin can delete a blog post and it is removed from database and UI.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to blog posts list."
+      },
+      {
+        "type": "action",
+        "description": "Initiate delete for a blog post."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify delete confirmation appears."
+      },
+      {
+        "type": "action",
+        "description": "Confirm deletion."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify blog post is removed from list and backend."
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "View Contact Form Messages List",
+    "description": "Verify admin can view a list of user messages submitted through the contact form.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin and navigate to Messages management page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify messages list loads with expected user message items."
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "View Detailed Contact Message",
+    "description": "Verify admin can view detailed content of a single user message.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "From messages list, select a message to view."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify detailed message content including sender info is displayed."
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Delete Contact Form Message",
+    "description": "Verify admin can delete a contact form message and it is removed from system.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Initiate delete for a message from messages list or detailed view."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify delete confirmation is shown."
+      },
+      {
+        "type": "action",
+        "description": "Confirm the deletion."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify message is no longer listed and backend data is removed."
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "View Registered Users List",
+    "description": "Verify admin can view a list of all registered users and see their information.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin and navigate to Users management page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify users list is displayed with relevant details per user."
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Responsive Sidebar Navigation - Active State",
+    "description": "Verify sidebar navigation displays user profile, is responsive, and updates active state correctly on route changes.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin and observe sidebar."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify current user profile info is displayed on sidebar."
+      },
+      {
+        "type": "action",
+        "description": "Navigate through pages: Dashboard, Projects, Blog Posts, Messages, Users."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sidebar active menu item changes according to current page."
+      },
+      {
+        "type": "assertion",
+        "description": "Resize browser viewport to simulate mobile devices."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sidebar collapses or behaves responsively."
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "JWT Token Expiration Auto Logout",
+    "description": "Verify that admin is automatically logged out when JWT token expires during a session.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin and obtain short-lived JWT token (simulate expiration)."
+      },
+      {
+        "type": "action",
+        "description": "Wait for token expiration or simulate expired token."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to perform an action requiring authentication (e.g. navigate to protected page or make API request)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify admin is logged out and redirected to login page."
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "API Configuration Consistency and Error Handling",
+    "description": "Verify that frontend API calls use centralized API configuration and handle errors gracefully.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Trigger API requests from multiple admin pages (projects, blog posts, messages, users)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify requests use the base URL and headers as defined in the centralized API config."
+      },
+      {
+        "type": "action",
+        "description": "Simulate backend error scenarios (500 server error, 404 not found)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify frontend displays user-friendly error messages and handles failures without crashing."
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Public-Facing Portfolio Displays Projects, Blog, and Contact Form",
+    "description": "Verify that the public portfolio website correctly shows projects, blog posts, and supports the contact form submission.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the public portfolio homepage."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify projects are displayed with correct images and details."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify blog posts are visible with titles and excerpts."
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form with valid user information and message."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify successful form submission acknowledgement."
+      }
+    ]
+  },
+  {
+    "id": "TC021",
+    "title": "Invalid Token Access to Protected API Endpoints",
+    "description": "Verify backend rejects invalid, malformed, or expired JWT tokens for protected API routes.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send API requests to protected endpoints with expired, malformed, or tampered tokens."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify backend responds with 401 Unauthorized status and error message."
+      }
+    ]
+  },
+  {
+    "id": "TC022",
+    "title": "CRUD Operations on User Accounts - Read Only",
+    "description": "Verify admin can view users' detailed information but cannot edit or delete users from the system.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Users management page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user details are displayed correctly."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no edit or delete actions are available for users."
+      }
+    ]
+  }
+]

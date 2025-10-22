@@ -1,0 +1,16 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:5173",
+  "executionArgs": {
+    "projectName": "Portfolio",
+    "projectPath": "/Users/raushakumar/My Work/Portfolio",
+    "testIds": [],
+    "additionalInstruction": "Focus on testing the admin panel functionality including authentication, dashboard, CRUD operations for projects and blog posts, message management, and user management. Ensure all admin features work correctly with proper error handling and responsive design.",
+    "envs": {
+      "API_KEY": "sk-user-40-dkQdKJbFsq0Ero0MHO5vUWERuDppkoqCKxv59-jkHbVr20he4FwOOxS_Zm6ES5NxtxNr6rjZsHQOGhiZ2uVHzz-5I8Dwf8Yqf4igQRbqmULZtI_j-sULu2jyLhiPnA3E"
+    }
+  },
+  "proxy": "http://9bb8dddd-72ba-4498-82ae-4198b9dc3fa3:PBAWlK4k2Spy6kaUWfZFCV1VBqkoHzx3@tun.testsprite.com:8080"
+}

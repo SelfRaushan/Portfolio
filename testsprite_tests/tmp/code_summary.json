@@ -1,0 +1,130 @@
+{
+  "tech_stack": [
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Tailwind CSS",
+    "Vite",
+    "Axios",
+    "JWT",
+    "React Router DOM"
+  ],
+  "features": [
+    {
+      "name": "Admin Authentication System",
+      "description": "JWT-based authentication system for admin panel with login, logout, and protected routes",
+      "files": [
+        "admin/src/contexts/AuthContext.jsx",
+        "admin/src/pages/Login.jsx",
+        "backend/controllers/authController.js",
+        "backend/middlewares/authMiddleware.js"
+      ]
+    },
+    {
+      "name": "Admin Dashboard",
+      "description": "Overview dashboard showing statistics and recent activity for projects, blog posts, messages, and users",
+      "files": [
+        "admin/src/pages/Dashboard.jsx",
+        "backend/controllers/adminController.js"
+      ]
+    },
+    {
+      "name": "Project Management",
+      "description": "Full CRUD operations for managing portfolio projects with image URLs, technologies, and project links",
+      "files": [
+        "admin/src/pages/Projects.jsx",
+        "backend/controllers/adminController.js",
+        "backend/controllers/projectController.js",
+        "backend/models/projectModel.js"
+      ]
+    },
+    {
+      "name": "Blog Post Management",
+      "description": "Complete blog post management system with content editing, tags, and author assignment",
+      "files": [
+        "admin/src/pages/BlogPosts.jsx",
+        "backend/controllers/adminController.js",
+        "backend/controllers/blogPostController.js",
+        "backend/models/blogPostModel.js"
+      ]
+    },
+    {
+      "name": "Message Management",
+      "description": "Contact form message management system for viewing and deleting messages",
+      "files": [
+        "admin/src/pages/Messages.jsx",
+        "backend/controllers/adminController.js",
+        "backend/controllers/contactController.js",
+        "backend/models/messageModel.js"
+      ]
+    },
+    {
+      "name": "User Management",
+      "description": "User management system for viewing registered users and their information",
+      "files": [
+        "admin/src/pages/Users.jsx",
+        "backend/controllers/adminController.js",
+        "backend/models/userModel.js"
+      ]
+    },
+    {
+      "name": "Admin Navigation",
+      "description": "Responsive sidebar navigation with active state management and user profile display",
+      "files": [
+        "admin/src/components/Sidebar.jsx",
+        "admin/src/App.jsx"
+      ]
+    },
+    {
+      "name": "API Configuration",
+      "description": "Centralized API configuration and endpoint management",
+      "files": [
+        "admin/src/config/api.js"
+      ]
+    },
+    {
+      "name": "Frontend Portfolio",
+      "description": "Public-facing portfolio website with project showcase, blog, and contact form",
+      "files": [
+        "Frontend/src/App.jsx",
+        "Frontend/src/components/",
+        "Frontend/src/page/"
+      ]
+    },
+    {
+      "name": "Backend API",
+      "description": "RESTful API server with authentication, CRUD operations, and database integration",
+      "files": [
+        "backend/app.js",
+        "backend/server.js",
+        "backend/routes/",
+        "backend/controllers/",
+        "backend/models/",
+        "backend/config/db.js"
+      ]
+    },
+    {
+      "name": "Database Models",
+      "description": "MongoDB models for projects, blog posts, messages, and users with validation",
+      "files": [
+        "backend/models/projectModel.js",
+        "backend/models/blogPostModel.js",
+        "backend/models/messageModel.js",
+        "backend/models/userModel.js"
+      ]
+    },
+    {
+      "name": "Admin Routes",
+      "description": "Protected admin API routes for all CRUD operations",
+      "files": [
+        "backend/routes/adminRoutes.js",
+        "backend/routes/authRoutes.js",
+        "backend/routes/projectRoutes.js",
+        "backend/routes/blogPostRoutes.js",
+        "backend/routes/contactRoutes.js"
+      ]
+    }
+  ]
+}

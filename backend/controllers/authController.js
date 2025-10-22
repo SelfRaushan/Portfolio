@@ -38,20 +38,44 @@ const registerUser = async (req, res) => {
 // @route   POST /api/auth/login
 // @access  Public
 const loginUser = async (req, res) => {
-    const { username, password } = req.body;
+    const { email, username, password } = req.body;
 
     try {
-        const user = await User.findOne({ username });
+        // Dynamically build the query to support both email and username
+        const query = {};
+        if (email) {
+            query.email = email;
+        } else if (username) {
+            query.username = username;
+        } else {
+            return res.status(400).json({ message: 'Please provide email or username' });
+        }
+
+        const user = await User.findOne(query);
 
         if (user && (await user.matchPassword(password))) {
             res.json({
                 _id: user._id,
                 username: user.username,
+                email: user.email,
+                name: user.name || user.username,
                 token: generateToken(user._id),
             });
         } else {
             res.status(401).json({ message: 'Invalid credentials' });
         }
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+};
+
+// @desc    Get current user
+// @route   GET /api/auth/me
+// @access  Private
+const getMe = async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select('-password');
+        res.json(user);
     } catch (error) {
         res.status(500).json({ message: 'Server error', error: error.message });
     }
@@ -67,4 +91,5 @@ const generateToken = (id) => {
 module.exports = {
     registerUser,
     loginUser,
+    getMe,
 };

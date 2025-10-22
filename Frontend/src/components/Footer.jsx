@@ -49,7 +49,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Connect With Me</h3>
             <div className="mt-4 space-y-3 text-center md:text-right">
               <a href="mailto:raushankumar811305@gmail.com" className="text-slate-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-white transition-colors duration-300">
-                raushankumar811305@gmail.com
+                raushansingh727308@gmail.com
               </a>
               <div className="flex justify-center md:justify-end space-x-5 mt-3">
                 <a href="https://www.linkedin.com/in/raushan-kumar-358b40224/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-white transition-transform duration-300 transform hover:scale-125">
