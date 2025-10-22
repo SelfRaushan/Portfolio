@@ -111,6 +111,13 @@ const Skills = () => {
         }
       `}</style>
 
+
+      {/* SEO */}
+      <title>Technical Skills | Rausah Kumar</title>
+      <meta name="description" content="A detailed overview of my technical skills, including proficiency in JavaScript, React.js, Node.js, CSS, HTML, and other technologies." />
+
+      
+
       <div ref={containerRef} className="relative overflow-hidden bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         {/* Decorative Background Element */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] sm:w-[100%] sm:h-[100%] z-0">

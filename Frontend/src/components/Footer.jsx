@@ -52,10 +52,10 @@ const Footer = () => {
                 raushansingh727308@gmail.com
               </a>
               <div className="flex justify-center md:justify-end space-x-5 mt-3">
-                <a href="https://www.linkedin.com/in/raushan-kumar-358b40224/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-white transition-transform duration-300 transform hover:scale-125">
+                <a href="https://www.linkedin.com/in/raushankumar7273/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-white transition-transform duration-300 transform hover:scale-125">
                   <FaLinkedin size={24} />
                 </a>
-                <a href="https://github.com/Raushan2002" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-slate-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-white transition-transform duration-300 transform hover:scale-125">
+                <a href="https://github.com/SelfRaushan" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-slate-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-white transition-transform duration-300 transform hover:scale-125">
                   <FaGithub size={24} />
                 </a>
               </div>

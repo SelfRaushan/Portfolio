@@ -84,6 +84,14 @@ const Contact = () => {
             100% { background-position: 0% 50%; }
         }
       `}</style>
+
+
+      {/* SEO */}
+
+      <title>Contact Me | Rausah Kumar</title>
+      <meta name="description" content="Get in touch with Rausah Kumar for project collaborations, job opportunities, or any inquiries. Let's build something amazing together." />
+
+      
       <div ref={containerRef} className="min-h-screen bg-animated-gradient flex items-center justify-center py-20 px-4 transition-all duration-300">
         <div className="max-w-6xl w-full mx-auto">
             <div className="text-center mb-16">

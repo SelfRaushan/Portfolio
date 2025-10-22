@@ -88,6 +88,11 @@ const Portfolio = () => {
         .animate-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
       `}</style>
+      {/* SEO */}
+      <title>My Projects | Rausah Kumar's Portfolio</title>
+      <meta name="description" content="Explore a collection of web development projects by Rausah Kumar, demonstrating skills in building modern, responsive web applications." />
+
+      
       <div ref={containerRef} className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         <section className="py-20 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4 animate-on-scroll">

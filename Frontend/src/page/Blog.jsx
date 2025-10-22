@@ -70,6 +70,14 @@ const Blog = () => {
         .animate-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
       `}</style>
+
+      {/* SEO */}
+
+      
+      <title>Web Development Blog | Rausah Kumar</title>
+      <meta name="description" content="Read articles and tutorials on web development, programming tips, and technology insights from Rausah Kumar." />
+
+
       <div ref={containerRef} className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         
         <section className="py-20 text-center px-4">

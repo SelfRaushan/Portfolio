@@ -101,6 +101,11 @@ const About = () => {
           border-color: #1e293b; /* slate-800 */
         }
       `}</style>
+      {/* SEO */}
+      <title>About Me | Rausah Kumar</title>
+      <meta name="description" content="Learn more about Rausah Kumar's journey into web development, my passion for coding, and the technologies I work with." />
+
+      
       <div ref={containerRef} className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-4 text-center">

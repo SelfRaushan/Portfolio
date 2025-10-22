@@ -59,7 +59,9 @@ const Home = () => {
           transform: translateY(0);
         }
       `}</style>
-
+      {/* SEO */}
+      <title>Raushan Kumar - MERN Stack Developer Portfolio</title>
+      <meta name="description" content="Portfolio of Roshan Kumar, a passionate MERN stack developer creating high-quality, responsive, and performant web applications. Available for hire and collaboration." />
       {/* Main container with theme-aware background */}
       <div className="bg-slate-50 dark:bg-slate-900 transition-colors duration-500">
         <HeroSection />
