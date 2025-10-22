@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Home from './page/Home';
 import Footer from './components/Footer';
@@ -40,7 +41,10 @@ const App = () => {
         </Routes>
       </main>
       <Footer />
+      <Analytics />
+
     </Router>
+    
   );
 };
 
