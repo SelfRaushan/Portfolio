@@ -46,6 +46,24 @@ const Home = () => {
 
   useStaggeredAnimation([aboutRef, skillsRef, projectsRef, ctaRef]);
 
+  const homePageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Raushan Kumar",
+      "jobTitle": "MERN Stack Developer",
+      "url": "https://justgodigital.online/",
+      "sameAs": [
+        "https://github.com/raushan7273",
+        "https://www.linkedin.com/in/raushan-kumar-7273rk/",
+        "https://twitter.com/raushankumar7273",
+        "https://www.facebook.com/raushankumar.7273",
+        "https://www.instagram.com/raushankumar.7273/"
+      ]
+    }
+  };
+
   return (
     <>
       {/* Inject CSS for animations and backgrounds */}
@@ -64,23 +82,10 @@ const Home = () => {
       <SEO
         title="Raushan Kumar - MERN Stack Developer Portfolio"
         description="Portfolio of Raushan Kumar, a passionate MERN stack developer creating high-quality, responsive, and performant web applications. Available for hire and collaboration."
+        keywords="Raushan Kumar, MERN Stack Developer, Full Stack Developer, React Developer, Node.js Developer, Hire MERN Stack Developer, Web Developer Portfolio, MERN Developer India, Freelance Web Developer, Responsive Web Applications"
         canonicalUrl="https://justgodigital.online/"
+        jsonLd={homePageJsonLd} // Pass the structured data as a prop
       />
-      {/* Add your ProfilePage JSON-LD script only on the home page */}
-      <script type="application/ld+json">
-      {`
-        {
-          "@context": "https://schema.org",
-          "@type": "ProfilePage",
-          "mainEntity": {
-            "@type": "Person",
-            "name": "Raushan Kumar",
-            "jobTitle": "MERN Stack Developer",
-            "url": "https://justgodigital.online/"
-          }
-        }
-      `}
-      </script>
 
       {/* Main container with theme-aware background */}
       <div className="bg-slate-50 dark:bg-slate-900 transition-colors duration-500">

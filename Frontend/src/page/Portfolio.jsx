@@ -10,7 +10,7 @@ const allProjects = [
     description: 'A professional makeover & beauty service website showcasing services, a gallery, and contact information.',
     techStack: ['React', 'Tailwind CSS', 'Vercel'],
     projectUrl: 'https://makeover2.vercel.app/',
-    githubUrl: 'https://github.com/Raushan2002/Makeover',
+    githubUrl: 'https://github.com/SelfRaushan/Makeover',
     category: 'Frontend',
   },
   {
@@ -18,7 +18,7 @@ const allProjects = [
     description: 'A logistics-focused service platform with interactive dashboards for warehousing and order management.',
     techStack: ['MERN Stack', 'REST APIs', 'JWT'],
     projectUrl: 'https://edison3pl.vercel.app/',
-    githubUrl: 'https://github.com/Raushan2002/3pl',
+    githubUrl: 'https://github.com/SelfRaushan/3pl',
     category: 'Full Stack',
   },
   {
@@ -26,7 +26,7 @@ const allProjects = [
     description: 'A platform to help dreamers turn ideas into reality, featuring a clean UI built with modern components.',
     techStack: ['React', 'Tailwind CSS', 'Vercel'],
     projectUrl: 'https://side-nest.vercel.app/',
-    githubUrl: 'https://github.com/Raushan2002/SideNest',
+    githubUrl: 'https://github.com/SelfRaushan/SideNest',
     category: 'Frontend',
   },
   {
@@ -82,6 +82,32 @@ const Portfolio = () => {
   const filteredProjects = activeFilter === 'All'
     ? allProjects
     : allProjects.filter(p => p.category === activeFilter);
+  // --- SEO ENHANCEMENT ---
+  const portfolioPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Project Portfolio of Raushan Kumar",
+    "url": "https://justgodigital.online/portfolio",
+    "description": "A collection of web development projects by Raushan Kumar, showcasing skills in MERN Stack, Frontend, and API development.",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": allProjects.map((project, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": project.title,
+          "description": project.description,
+          "url": project.projectUrl,
+          "author": {
+            "@type": "Person",
+            "name": "Raushan Kumar"
+          },
+          "keywords": project.techStack.join(', ')
+        }
+      }))
+    }
+  };
 
   return (
     <>
@@ -94,6 +120,8 @@ const Portfolio = () => {
         title="My Projects | Raushan Kumar's Portfolio"
         description="Explore a collection of web development projects by Raushan Kumar, demonstrating skills in building modern, responsive web applications."
         canonicalUrl="https://justgodigital.online/portfolio"
+        keywords="Web Development Portfolio, MERN Stack Projects, React Project Examples, Full Stack Applications, Node.js API Projects, Makeover By Leena, 3PL Service Website, SideNest Project, Frontend Portfolio, Backend Portfolio"
+        jsonLd={portfolioPageJsonLd}
       />
       
       <div ref={containerRef} className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">

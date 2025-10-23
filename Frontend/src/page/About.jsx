@@ -30,6 +30,22 @@ const useIntersectionObserver = (options) => {
 const About = () => {
   const containerRef = useIntersectionObserver({ threshold: 0.1 });
 
+  // --- SEO ENHANCEMENT ---
+  const aboutPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Raushan Kumar",
+    "url": "https://justgodigital.online/about",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Raushan Kumar",
+      "jobTitle": "MERN Stack Developer",
+      "image": "https://justgodigital.online/og-image.png", // Assuming your OG image is a picture of you
+      "url": "https://justgodigital.online/"
+    },
+    "description": "Learn about Raushan Kumar's professional journey, development philosophy, and the skills that drive his passion for creating modern web applications."
+  };
+
   const timelineEvents = [
     { 
       icon: <GraduationCap />, 
@@ -107,7 +123,8 @@ const About = () => {
         title="About Me | Raushan Kumar"
         description="Learn more about Raushan Kumar's journey into web development, my passion for coding, and the technologies I work with."
         canonicalUrl="https://justgodigital.online/about"
-  
+        keywords="About Raushan Kumar, MERN Stack Developer Journey, Full Stack Developer Experience, Web Development Philosophy, Landing Labs Pvt. Ltd., NIET Developer, Clean Code, User-Centric Design, Professional Web Developer"
+        jsonLd={aboutPageJsonLd}
       />
       
       <div ref={containerRef} className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">

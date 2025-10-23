@@ -91,6 +91,20 @@ const useIntersectionObserver = (options) => {
 const Skills = () => {
   const containerRef = useIntersectionObserver({ threshold: 0.1 });
 
+  // --- SEO ENHANCEMENT ---
+  // Flattens the skills data into a single array of strings for the schema
+  const allSkillNames = skillsData.flatMap(category => 
+    category.skills.map(skill => skill.name)
+  );
+  const skillsPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Raushan Kumar",
+    "url": "https://justgodigital.online/",
+    "description": "MERN Stack Developer with expertise in Frontend, Backend, and DevOps technologies.",
+    "knowsAbout": allSkillNames
+  };
+
   return (
     <>
       <style>{`
@@ -117,9 +131,9 @@ const Skills = () => {
       <SEO 
         title="Technical Skills | Raushan Kumar"
         description="A detailed overview of my technical skills, including proficiency in JavaScript, React.js, Node.js, CSS, HTML, and other technologies."
-        keywords="Raushan Kumar, Frontend Developer, Backend Developer"
+        keywords="Raushan Kumar, Frontend Developer, Backend Developer, MERN Stack,Technical Skills, MERN Stack Skills, React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Redux Toolkit, Node.js, Express.js, RESTful APIs, GraphQL, MongoDB, PostgreSQL, Docker, Git, Agile, Scrum, Frontend Skills, Backend Skills"
         canonicalUrl="https://justgodigital.online/skills"
-
+        jsonLd={skillsPageJsonLd}
       />
       
 

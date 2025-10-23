@@ -65,6 +65,31 @@ const useIntersectionObserver = (options) => {
 const Blog = () => {
   const containerRef = useIntersectionObserver({ threshold: 0.1 });
 
+
+// --- SEO ENHANCEMENT ---
+  const blogPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Web Development Blog | Raushan Kumar",
+    "url": "https://justgodigital.online/blog",
+    "description": "Articles and tutorials on web development, MERN Stack, and technology insights.",
+    "publisher": {
+        "@type": "Person",
+        "name": "Raushan Kumar"
+    },
+    "blogPost": [featuredPost, ...recentPosts].map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "image": post.image,
+      "author": {
+        "@type": "Person",
+        "name": "Raushan Kumar"
+      },
+      "url": `https://justgodigital.online${post.link}`, // Create absolute URL
+      "description": post.excerpt
+    }))
+  };
+
   return (
     <>
       <style>{`
@@ -77,6 +102,8 @@ const Blog = () => {
         title="Web Development Blog | Raushan Kumar"
         description="Read articles and tutorials on web development, programming tips, and technology insights from Rausah Kumar."
         canonicalUrl="https://justgodigital.online/blog"
+        keywords="Web Development Blog, MERN Stack Blog, React Tutorials, Node.js Guides, Redux Toolkit, State Management, RESTful API Design, Tailwind CSS Tips, Developer Productivity, Programming Articles"
+        jsonLd={blogPageJsonLd}
       />
       
 

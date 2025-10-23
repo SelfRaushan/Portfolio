@@ -64,6 +64,33 @@ const Contact = () => {
     });
   };
 
+  // --- SEO ENHANCEMENT ---
+  const contactPageJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "url": "https://justgodigital.online/contact",
+      "name": "Contact Raushan Kumar",
+      "description": "Get in touch with Raushan Kumar for project inquiries, collaborations, or job opportunities.",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Raushan Kumar",
+        "email": "raushansingh727308@gmail.com",
+        "url": "https://justgodigital.online/",
+         "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Project Inquiry",
+            "email": "raushansingh727308@gmail.com",
+            "availableLanguage": ["English"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/raushankumar7273/",
+          "https://github.com/SelfRaushan"
+        ]
+      }
+    }
+  ];
+
   return (
     <>
       <style>{`
@@ -92,6 +119,8 @@ const Contact = () => {
         title="Contact Me | Raushan Kumar" 
         description="Get in touch with Raushan Kumar for project collaborations, job opportunities, or any inquiries. Let's build something amazing together." 
         canonicalUrl="https://justgodigital.online/contact"
+        keywords="Contact Raushan Kumar, Hire MERN Developer, Get in Touch, Web Development Inquiry, Project Collaboration, Freelance Developer Contact, Job Opportunity, MERN Developer for Hire India, Schedule a Meeting"
+        jsonLd={contactPageJsonLd}
       />
  
 
